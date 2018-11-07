@@ -105,7 +105,7 @@ function getDate() {
         "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
     var diasSemana = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
     var f = new Date();
-    document.write('<p class="date" id="date">' + diasSemana[f.getDay()] + ", " + f.getDate() + meses[f.getMonth()] + f.getFullYear() + '</p>');
+    document.write('<p class="date" id="date">'+f.getDate() + diasSemana[f.getDay()] + ", " +  meses[f.getMonth()] + f.getFullYear() + '</p>');
 }
 
 addTaskButton.addEventListener('click', showModal);
