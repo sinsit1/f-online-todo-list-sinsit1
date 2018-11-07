@@ -1,8 +1,9 @@
 .modal {
+    display: flex;
+    flex-direction: column;
     background-color: aquamarine;
     width: 270px;
     border: 1px solid black;
-    justify-self: flex-end;
 }
 .hidden {
     display: none;
@@ -31,6 +32,12 @@ body {
     border-radius: 50%;
     background: lightseagreen;
     bottom: 0;
+}
+.modal__btn {
+    border: 2px solid lightseagreen;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 .main {
     display: flex;
