@@ -22,10 +22,11 @@ function addTask(param) {
     console.log(taskArray);
     paintTask();
     taskNumber++;
+
 }
 
 
-function paintTask(){
+function paintTask() {
     console.log('repinto', taskNumber);
     itemsList.innerHTML = '';
     taskArray.map(task => {
@@ -37,7 +38,7 @@ function paintTask(){
                 const valueParraf = document.createElement('p');
 
                 taskcontainer.classList.add('task__container');
-                taskcontainer.id = taskNumber;
+                taskcontainer.id = task.order;
                 falseCheckBox.type = 'checkbox';
                 falseCheckBox.classList.add('falseCheckbox');
                 valueParraf.innerHTML = task.value;
@@ -47,8 +48,10 @@ function paintTask(){
                 taskcontainer.appendChild(falseCheckBox);
                 taskcontainer.appendChild(valueParraf);
                 taskInputValue.value = '';
+
             }
         }
+
     );
 
 
@@ -74,25 +77,20 @@ function paintTask(){
             taskcontainer.appendChild(valueParraf);
             taskInputValue.value = '';
         }
-    }
-);
-
-
-
+    });
 }
 
 function disableTask(e) {
     console.log('id current target', e.currentTarget);
-    taskArray[this.id-1].disabled = true;
+    taskArray[this.id].disabled = true;
     paintTask();
 
 }
 
 function ableTask() {
     console.log(this.id);
-    taskArray[this.id+1].disabled = false;
+    taskArray[this.id].disabled = false;
     paintTask();
-
 }
 
 function showModal() {
