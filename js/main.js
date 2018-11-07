@@ -19,7 +19,6 @@ function addTask(param) {
         disabled: false
     }
 
-    console.log(taskArray);
     paintTask();
     taskNumber++;
 
@@ -27,7 +26,6 @@ function addTask(param) {
 
 
 function paintTask() {
-    console.log('repinto', taskNumber);
     itemsList.innerHTML = '';
     taskArray.map(task => {
 
@@ -40,7 +38,7 @@ function paintTask() {
                 taskcontainer.classList.add('task__container');
                 taskcontainer.id = task.order;
                 falseCheckBox.type = 'checkbox';
-                falseCheckBox.classList.add('falseCheckbox');
+                falseCheckBox.innerHTML= '<i class="far fa-circle disableTaskCheck"></i>';
                 valueParraf.innerHTML = task.value;
 
                 itemsList.appendChild(taskcontainer);
@@ -66,7 +64,7 @@ function paintTask() {
             taskcontainer.classList.add('task__container');
             taskcontainer.id = task.order;
             falseCheckBox.type = 'checkbox';
-            falseCheckBox.classList.add('falseCheckbox');
+            falseCheckBox.innerHTML= '<i class="far fa-check-circle disableTaskCheck"></i>';
             valueParraf.innerHTML = task.value;
 
             itemsList.appendChild(taskcontainer);
@@ -81,14 +79,12 @@ function paintTask() {
 }
 
 function disableTask(e) {
-    console.log('id current target', e.currentTarget);
     taskArray[this.id].disabled = true;
     paintTask();
 
 }
 
 function ableTask() {
-    console.log(this.id);
     taskArray[this.id].disabled = false;
     paintTask();
 }
@@ -99,7 +95,6 @@ function showModal() {
 
 function saveTask() {
     let task_value = this.value;
-    console.log('value', this.value);
     modal.classList.toggle('hidden');
 
     addTask(task_value);
