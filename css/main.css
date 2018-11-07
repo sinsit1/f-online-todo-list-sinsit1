@@ -9,6 +9,10 @@
     display: none;
 
 }
+p, ul{
+    margin:0;
+    padding: 0;
+}
 body {
     display: flex;
     justify-content: center;
@@ -17,6 +21,7 @@ body {
     border: 1px solid black;
     width: 300px;
     height: 80vh;
+    font-family: sans-serif;
 }
 .date {
     position: absolute;
@@ -31,7 +36,7 @@ body {
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background: lightseagreen;
-    bottom: 0;
+    margin-bottom: 20px;
 }
 .modal__btn {
     border: 2px solid lightseagreen;
@@ -56,4 +61,32 @@ body {
 .container__list {
     display: flex;
     justify-content: center;
+}
+.falseCheckbox{
+    width: 20px;
+    height: 20px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border:2px solid lightseagreen;
+    margin:10px;
+}
+.task__container{
+    display: flex;
+    align-items: center;
+}
+.items__list{
+    align-items: flex-start;
+    width: 250px;
+    margin-top: 50px;
+    color: grey;
+    font-weight: 600;
+    
+}
+/* .disableTaskCircle {
+    
+} */
+.disableTaskP {
+    text-decoration:line-through;
+    color: lightgray;
 }
