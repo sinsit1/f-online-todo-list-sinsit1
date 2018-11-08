@@ -9,6 +9,7 @@
     position: fixed;
     bottom: 140px;
     box-shadow: 2px 7px 74px -4px rgba(0, 0, 0, 0.75);
+    z-index: 100;
 
 }
 
@@ -50,6 +51,7 @@ body {
     font-size: 18px;
     border-radius: 10px;
     box-shadow: -2px 1px 88px -14px rgba(0, 0, 0, 0.75);
+    position: relative;
 }
 
 .header {
@@ -67,8 +69,9 @@ body {
     width: 100px;
     height: 100px;
     font-size: 12px;
-    right: 100px;
+    right: 0;
     top: 15px;
+    z-index: 2;
 }
 .weekDay{
     position: absolute;
