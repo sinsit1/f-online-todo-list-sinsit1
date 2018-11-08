@@ -105,7 +105,10 @@ function getDate() {
         "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
     var diasSemana = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
     var f = new Date();
-    document.write('<p class="date" id="date">'+f.getDate() + diasSemana[f.getDay()] + ", " +  meses[f.getMonth()] + f.getFullYear() + '</p>');
+    document.getElementById('dayNumber').innerHTML=(f.getDate());
+    document.getElementById('weekDay').innerHTML=(diasSemana[f.getDay()]);
+    document.getElementById('monthYear').innerHTML=(meses[f.getMonth()] +', '+ f.getFullYear());
+
 }
 
 addTaskButton.addEventListener('click', showModal);

@@ -1,43 +1,11 @@
-.modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #11ad98;
-    width: 250px;
-    border-radius: 5px;
-    height: 150px;
-    position: fixed;
-    bottom: 140px;
-    box-shadow: 2px 7px 74px -4px rgba(0, 0, 0, 0.75);
-    z-index: 100;
-
-}
-
-.modal__btn {
-    border: 1px solid white;
-    color: white;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    padding: 5px;
-    width: 120px;
-    left: 62px;
-    margin-bottom: 25px;
-
-}
-
-.hidden {
-    display: none;
-
-}
-
+/* reboot */
 p,
 ul {
     margin: 0;
     padding: 0;
 }
+
+/* body styles */
 
 body {
     display: flex;
@@ -63,20 +31,64 @@ body {
     top: 0;
 }
 
-.date {
+/* main styles */
+
+.main {
     display: flex;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    font-size: 12px;
-    right: 0;
-    top: 15px;
-    z-index: 2;
+    position: relative;
+    height: 100%;
 }
-.weekDay{
+
+
+.container__list {
+    display: flex;
+    justify-content: center;
+}
+
+.items__list {
+    align-items: flex-start;
+    width: 300px;
+    margin-top: 90px;
+    color: grey;
+    font-weight: 600;
+}
+
+.task__container {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.falseCheckbox {
+    width: 20px;
+    height: 20px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid lightseagreen;
+    margin: 10px;
+}
+
+.disableTaskP {
+    text-decoration: line-through;
+    color: lightgray;
+}
+
+.disableTaskCheck {
+    color: lightseagreen;
+    font-size: 25px;
+    margin: 0 10px 0 20px;
+    ;
+}
+
+
+/* footer styles */
+
+.container__footer {
+    bottom: 0;
     position: absolute;
-    color: #11ad98;
-    font-size: 40px;
+    margin: 0 auto;
+    display: flex;
 }
 
 .add__btn {
@@ -95,55 +107,38 @@ body {
 
 .add__plus {
     color: lightseagreen;
-
 }
 
 
-.main {
-    display: flex;
-    position: relative;
-    height: 100%;
-}
 
-.container__footer {
-    position: fixed;
-    bottom: 0;
-    position: absolute;
-    margin: 0 auto;
+/* modal styles */
+
+.modal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    display: flex;
+    background-color: #11ad98;
+    width: 250px;
+    border-radius: 5px;
+    height: 150px;
+    position: fixed;
+    bottom: 140px;
+    box-shadow: 2px 7px 74px -4px rgba(0, 0, 0, 0.75);
+    z-index: 100;
 }
 
-.container__list {
+.modal__btn {
+    border: 1px solid white;
+    color: white;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
-}
-
-.falseCheckbox {
-    width: 20px;
-    height: 20px;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    border: 2px solid lightseagreen;
-    margin: 10px;
-}
-
-.task__container {
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-}
-
-.items__list {
-    align-items: flex-start;
-    width: 300px;
-    margin-top: 90px;
-    color: grey;
-    font-weight: 600;
-
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    width: 120px;
+    left: 62px;
+    margin-bottom: 25px;
 }
 
 .textInput {
@@ -155,7 +150,6 @@ body {
     border: none;
     border: 0.5px solid white;
     color: white;
-
 }
 
 .labelInput {
@@ -164,17 +158,32 @@ body {
     top: 25px;
     left: 37px;
     color: white;
-
 }
 
-.disableTaskP {
-    text-decoration: line-through;
-    color: lightgray;
+/* date styles */
+
+.date {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    font-size: 12px;
+    z-index: 2;
 }
 
-.disableTaskCheck {
-    color: lightseagreen;
-    font-size: 25px;
-    margin: 0 10px 0 20px;
-    ;
+.monthDay {
+    color: #11ad98;
+    font-size: 40px;
+}
+
+.weekDay{
+    color: darkslategrey;
+    font-weight: 800;
+}
+
+.monthYear{
+    color: grey;
+    font-weight: 800;
+}
+.hidden {
+    display: none;
 }
